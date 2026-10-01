@@ -140,8 +140,8 @@ The tracklink **metrics contract** (7/30/90 calendar-filled windows, absence ≠
 ### Piece 1 — SEO/GEO (Attract)
 
 - **What it does:** audits your site for classic search and AI search with a plugin of 25 sub-skills and 18 specialist agents. Its declared differentiator: **falsifiability** — every recommendation carries its own failure criterion.
-- **Repo:** [`luisroquette/claude-seo`](https://github.com/luisroquette/claude-seo) (MIT, fork of [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) — kept in sync with upstream)
-- **Install:** `git clone https://github.com/luisroquette/claude-seo.git`
+- **Repo:** [`luisroquette-labs/claude-seo`](https://github.com/luisroquette-labs/claude-seo) (MIT, fork of [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) — kept in sync with upstream)
+- **Install:** `git clone https://github.com/luisroquette-labs/claude-seo.git`
 - **Plug:** no dependencies — it is the front door. The connection to the rest of the funnel is indirect: the LP's SEO gate (metaTitle/metaDescription/JSON-LD) uses the same pattern, and the audited content is what the autoblog publishes.
 - **Real imagery:** the repo includes demo GIFs of the plugin running in the terminal and the author's real growth chart.
 
@@ -154,8 +154,8 @@ The tracklink **metrics contract** (7/30/90 calendar-filled windows, absence ≠
 ### Piece 3 — LP Engine (Convert)
 
 - **What it does:** sales pages from a brief or a URL, with **6 models** (universal, course, event, capture, squeeze, launch), **4 gates** (structure, rules, WCAG AA contrast, SEO) and **anti-fabrication** as the supreme rule — a price, deadline or credential that is not in the source is omitted, never invented.
-- **Repo:** [`luisroquette/My_LP_Makes_Neil_Proud`](https://github.com/luisroquette/My_LP_Makes_Neil_Proud)
-- **Install:** `git clone https://github.com/luisroquette/My_LP_Makes_Neil_Proud.git`
+- **Repo:** [`luisroquette-labs/My_LP_Makes_Neil_Proud`](https://github.com/luisroquette-labs/My_LP_Makes_Neil_Proud)
+- **Install:** `git clone https://github.com/luisroquette-labs/My_LP_Makes_Neil_Proud.git`
 - **Plug:**
   - → **Tracklink**: every published CTA becomes a tracked link; the lead records `firstTrackingClickId`/`lastTrackingClickId`.
   - → **MailMKT**: the captured lead enters nurture through the intake contract.
@@ -167,8 +167,8 @@ The tracklink **metrics contract** (7/30/90 calendar-filled windows, absence ≠
 ### Piece 4 — Tracklink UTM (Convert/Measure)
 
 - **What it does:** the owner of the tracking contract — creation (`mailmkt-`/UTM slugs, query-free destinations, anti-loop), click (transactional, idempotent, `RETURNING (xmax = 0)`), attribution (first/last click, camelCase on the lead, snake_case on the purchase), health (SSRF guard with per-redirect-hop revalidation, datacenter-block detection) and metrics (7/30/90 calendar-filled).
-- **Repo:** [`luisroquette/My_UTMs_Make_Me_Proud`](https://github.com/luisroquette/My_UTMs_Make_Me_Proud)
-- **Install:** `git clone https://github.com/luisroquette/My_UTMs_Make_Me_Proud.git`
+- **Repo:** [`luisroquette-labs/My_UTMs_Make_Me_Proud`](https://github.com/luisroquette-labs/My_UTMs_Make_Me_Proud)
+- **Install:** `git clone https://github.com/luisroquette-labs/My_UTMs_Make_Me_Proud.git`
 - **Plug:** LP (link producer), MailMKT (every CTA), unified dashboard (metrics). The core is channel-agnostic: each new channel is a directory in `integracoes/` with its hostname→utm_source map.
 - **Real imagery:** the validator with the 13 regression cases (below).
 
@@ -182,8 +182,8 @@ The tracklink **metrics contract** (7/30/90 calendar-filled windows, absence ≠
 ### Piece 5 — MailMKT (Nurture)
 
 - **What it does:** the email cockpit — shared throttle (1 email/lead/day + 20h floor), one cron with priority dispatcher, durable outbox (claim/lease, 23h dead-letter, fail-closed), copy floor at save AND at send, and the demo dashboard with 6 screens.
-- **Repo:** [`luisroquette/My_MailMKT_makes_Neil_Proud`](https://github.com/luisroquette/My_MailMKT_makes_Neil_Proud)
-- **Install:** `git clone https://github.com/luisroquette/My_MailMKT_makes_Neil_Proud.git` · demo: `cd dashboard && npm install && npm run dev`
+- **Repo:** [`luisroquette-labs/My_MailMKT_makes_Neil_Proud`](https://github.com/luisroquette-labs/My_MailMKT_makes_Neil_Proud)
+- **Install:** `git clone https://github.com/luisroquette-labs/My_MailMKT_makes_Neil_Proud.git` · demo: `cd dashboard && npm install && npm run dev`
 - **Plug:** LP (lead intake), Tracklink (`mailmkt-<slug>` CTAs), Resend/Supabase (faithful adapters) — the core is ports-and-adapters, zero dependencies.
 - **Real imagery:** the four screens of the demo dashboard (below).
 
@@ -208,8 +208,8 @@ The tracklink **metrics contract** (7/30/90 calendar-filled windows, absence ≠
 ### Piece 6 — Dashboard (Measure)
 
 - **What it does:** the unified metrics dashboard — reads clicks, leads, and purchases from the same Supabase the other pieces write, applies the 7/30/90 calendar-filled contract (absence ≠ zero), and renders which channel sold. It is the layer that crosses all the others: the tracklink metrics contract feeds it, and the MailMKT cockpit contributes its documented queries.
-- **Repo:** [`luisroquette/My_Dashboard_Makes_Me_Proud`](https://github.com/luisroquette/My_Dashboard_Makes_Me_Proud)
-- **Install:** `git clone https://github.com/luisroquette/My_Dashboard_Makes_Me_Proud.git` · demo: open `demo/index.html` in a browser
+- **Repo:** [`luisroquette-labs/My_Dashboard_Makes_Me_Proud`](https://github.com/luisroquette-labs/My_Dashboard_Makes_Me_Proud)
+- **Install:** `git clone https://github.com/luisroquette-labs/My_Dashboard_Makes_Me_Proud.git` · demo: open `demo/index.html` in a browser
 - **Plug:** Tracklink (metrics contract), MailMKT (cockpit queries) — read-only by contract: it never writes to the owner's database, and its failures never touch the funnel.
 
 ---
@@ -379,8 +379,8 @@ MIT — each piece keeps its own license (all MIT). claude-seo is MIT by its ori
 
 **Step 1 — Clone the two pieces.**
 ```bash
-git clone https://github.com/luisroquette/My_LP_Makes_Neil_Proud.git
-git clone https://github.com/luisroquette/My_UTMs_Make_Me_Proud.git
+git clone https://github.com/luisroquette-labs/My_LP_Makes_Neil_Proud.git
+git clone https://github.com/luisroquette-labs/My_UTMs_Make_Me_Proud.git
 ```
 
 **Step 2 — Validate the machines.** Each repo ships a deterministic validator that you run BEFORE using it — if the self-test fails, the machine is broken:

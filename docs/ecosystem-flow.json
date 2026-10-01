@@ -1,13 +1,13 @@
 {
   "title": "MARKETING 4.0 — how the pieces communicate",
   "nodes": [
-    { "id": "claude-seo", "piece": "SEO/GEO audit", "stage": "ATTRACT", "repo": "luisroquette/claude-seo" },
+    { "id": "claude-seo", "piece": "SEO/GEO audit", "stage": "ATTRACT", "repo": "luisroquette-labs/claude-seo" },
     { "id": "autoblog", "piece": "Autoblog", "stage": "ATTRACT", "repo": "the production site (app/api/cron/generate-article)" },
-    { "id": "lp", "piece": "LP Engine", "stage": "CONVERT", "repo": "luisroquette/My_LP_Makes_Neil_Proud" },
-    { "id": "tracklink", "piece": "Tracklink UTM", "stage": "CONVERT / MEASURE", "repo": "luisroquette/My_UTMs_Make_Me_Proud" },
-    { "id": "mailmkt", "piece": "MailMKT cockpit", "stage": "NURTURE", "repo": "luisroquette/My_MailMKT_makes_Neil_Proud" },
+    { "id": "lp", "piece": "LP Engine", "stage": "CONVERT", "repo": "luisroquette-labs/My_LP_Makes_Neil_Proud" },
+    { "id": "tracklink", "piece": "Tracklink UTM", "stage": "CONVERT / MEASURE", "repo": "luisroquette-labs/My_UTMs_Make_Me_Proud" },
+    { "id": "mailmkt", "piece": "MailMKT cockpit", "stage": "NURTURE", "repo": "luisroquette-labs/My_MailMKT_makes_Neil_Proud" },
     { "id": "purchase", "piece": "Purchase (the checkout you already have)", "stage": "outside the pack" },
-    { "id": "dashboard", "piece": "Unified dashboard", "stage": "MEASURE", "repo": "luisroquette/My_Dashboard_Makes_Me_Proud" }
+    { "id": "dashboard", "piece": "Unified dashboard", "stage": "MEASURE", "repo": "luisroquette-labs/My_Dashboard_Makes_Me_Proud" }
   ],
   "edges": [
     { "from": "claude-seo", "to": "autoblog", "mechanism": "shared pattern: LP SEO gate (metaTitle/description/JSON-LD) follows the same methodology; audited content is what the autoblog publishes", "direct": false },

@@ -109,9 +109,9 @@ def validate_gate_commands():
     errors = []
     path = SKILL_REF / "gate-commands.md"
     text = path.read_text(encoding="utf-8")
-    if "https://github.com/luisroquette/My_Dashboard_Makes_Me_Proud" not in text:
+    if "https://github.com/luisroquette-labs/My_Dashboard_Makes_Me_Proud" not in text:
         errors.append("gate-commands.md: dashboard clone URL missing (6th piece not installable)")
-    if "https://github.com/luisroquette/claude-seo" not in text:
+    if "https://github.com/luisroquette-labs/claude-seo" not in text:
         errors.append("gate-commands.md: claude-seo fork URL missing")
     if "never forked" in text:
         errors.append("gate-commands.md: stale 'never forked' claude-seo note (piece 1 IS a fork)")
