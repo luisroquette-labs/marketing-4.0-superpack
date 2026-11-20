@@ -1,4 +1,3 @@
-// Renders status.json into the four stage cards. Read-only: never writes to the motor.
 const TITLES = {
   "blog-post": (it) => it.title || "Untitled post",
   "landing-page": (it) => it.slug || "Untitled LP",

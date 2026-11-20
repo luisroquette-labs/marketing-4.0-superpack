@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# tools/export-status/export_status.py
 """Exports Marketing 4.0 workspace artifacts into status.json (schema v1).
 
 Reads the artifact files defined in status.schema.md. Absent files mean an

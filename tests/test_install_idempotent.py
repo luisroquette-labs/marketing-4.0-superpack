@@ -1,4 +1,3 @@
-# tests/test_install_idempotent.py
 """Regression tests: install.sh re-runs must be idempotent (no duplicate
 CLAUDE.md pointer, no nested wizard folder)."""
 import subprocess

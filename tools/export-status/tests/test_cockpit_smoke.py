@@ -1,4 +1,3 @@
-# tools/export-status/tests/test_cockpit_smoke.py
 """Structural smoke tests for the static cockpit page."""
 from pathlib import Path
 
