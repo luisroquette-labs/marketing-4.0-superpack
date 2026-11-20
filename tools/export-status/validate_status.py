@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# tools/export-status/validate_status.py
 """Validates status.json against the Marketing 4.0 stage contract (schema v1)."""
 import json
 import sys

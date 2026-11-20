@@ -1,4 +1,3 @@
-# tools/export-status/tests/test_export_status.py
 """Tests for the workspace -> status.json exporter."""
 from pathlib import Path
 

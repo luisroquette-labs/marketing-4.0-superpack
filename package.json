@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:comment-lint": "node --test scripts/check-comments.test.mjs && python3 -m unittest discover -s scripts -p test_check_comments.py",
+    "lint": "node scripts/check-comments.mjs && python3 scripts/check_comments.py",
+    "preflight:ci": "npm run test:comment-lint && npm run lint && python3 -m pytest -q"
+  },
+  "devDependencies": {
+    "acorn": "^8.19.0",
+    "parse5": "^8.1.1",
+    "postcss": "^8.5.33"
+  }
+}

@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Marketing 4.0 client kit installer.
-# Runs inside the client's workspace. Installs the 5 engine skills and the
-# onboarding wizard into .claude/skills/, and appends a CLAUDE.md pointer.
-# Owner is overridable: MARKETING40_OWNER=myorg bash install.sh
 set -euo pipefail
 
 OWNER="${MARKETING40_OWNER:-luisroquette}"
@@ -66,8 +62,6 @@ done
 
 if [[ -d "${WIZARD_SRC}" ]]; then
   wizard_dst="${SKILLS_DIR}/marketing40-onboarding"
-  # Bundle layout: when install.sh ships inside the workspace, source and
-  # destination are the same folder — deleting would destroy the wizard.
   if [[ "$(cd "${WIZARD_SRC}" && pwd -P)" != "$(cd "${wizard_dst}" 2>/dev/null && pwd -P)" ]]; then
     rm -rf "${wizard_dst}"
     cp -R "${WIZARD_SRC}" "${wizard_dst}"

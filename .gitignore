@@ -2,9 +2,13 @@
 .env
 marketing40-setup/
 
-# Marketing 4.0 kit artifacts
 marketing40/
 artifacts/
+!tools/export-status/tests/fixtures/full/artifacts/
+!tools/export-status/tests/fixtures/full/artifacts/**
+!tools/export-status/tests/fixtures/malformed/artifacts/
+!tools/export-status/tests/fixtures/malformed/artifacts/**
 status.json
 .pytest_cache/
 __pycache__/
+node_modules/

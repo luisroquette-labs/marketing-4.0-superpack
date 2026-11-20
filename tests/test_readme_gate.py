@@ -1,4 +1,3 @@
-# tests/test_readme_gate.py
 """Gate tests: the README must name the runtime and the single start flow."""
 from pathlib import Path
 

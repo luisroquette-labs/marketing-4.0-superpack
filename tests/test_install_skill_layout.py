@@ -1,4 +1,3 @@
-# tests/test_install_skill_layout.py
 """REGRESSÃO (piloto COESA 2026-08-20): o installer perdia engines cujo
 SKILL.md vive em skills/<name>/ (claude-seo) e falhava em silêncio quando o
 repo não tem SKILL.md nenhum (my-blog-makes-neil-proud)."""
@@ -21,16 +20,13 @@ def _workspace(tmp_path):
     """Workspace com os 5 repos já clonados (sem rede), layouts reais."""
     for name in ENGINES:
         (tmp_path / "marketing40" / name).mkdir(parents=True)
-    # 3 engines clássicos: SKILL.md na raiz
     for name in ENGINES[:3]:
         (tmp_path / "marketing40" / name / "SKILL.md").write_text(
             "# stub\n", encoding="utf-8"
         )
-    # claude-seo: skills aninhadas em skills/<name>/, sem SKILL.md na raiz
     seo = tmp_path / "marketing40" / "claude-seo" / "skills" / "seo-plan"
     seo.mkdir(parents=True)
     (seo / "SKILL.md").write_text("# seo-plan\n", encoding="utf-8")
-    # my-blog: sem SKILL.md em lugar nenhum
     return tmp_path
 
 

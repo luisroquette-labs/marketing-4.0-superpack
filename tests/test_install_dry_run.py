@@ -1,4 +1,3 @@
-# tests/test_install_dry_run.py
 """Tests for the client kit installer's dry-run contract."""
 import subprocess
 from pathlib import Path

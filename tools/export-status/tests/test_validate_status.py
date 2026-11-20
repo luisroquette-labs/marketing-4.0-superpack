@@ -1,4 +1,3 @@
-# tools/export-status/tests/test_validate_status.py
 """Tests for the status.json contract validator."""
 
 from validate_status import validate
